@@ -39,7 +39,7 @@
   }
   .entryInner, .header {
     width: 100%;
-    padding: 10px 20px;
+    padding: 5px 10px;
     align-items: center;
     border-bottom: 1px solid #ccc;
   }
@@ -97,10 +97,39 @@
   .operation .params {
     flex: 1;
   }
-  .operation .fields {
+  .operation.header .fields {    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .operation.header .fields span {    
     flex: 1;
+    padding-right: 5px;
+  }  
+  .operation .fields {    
+    flex: 1;    
     border-right: none;
   }
+  .operation.header .fields .clear {
+    flex: 0 1 200px;
+    border: none;
+    padding: 6px 10px;
+    background-color: rgba(111, 194, 139, 1);
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-radius: 2px;
+    cursor: pointer;
+  }  
+  .operation .clear:hover {
+    background-color: rgba(91, 158, 114, 1);
+  }
+  .operation .clearactive {
+    background-color: rgba(68, 119, 85, 1);
+  }
+
   .optsBanner {
     width: 50%;
     position: fixed;
@@ -254,32 +283,6 @@
   .nameParamWrapper {
     display: flex;
     align-items: center;
-  }
-  .clearContainer {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-  }
-  .clearContainer button {
-    border: none;
-    padding: 8px 10px;
-    background-color: rgba(111, 194, 139, 1);
-    color: #fff;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    border-radius: 2px;
-    cursor: pointer;
-    position: fixed;
-    top: 3px;
-    right: 5px;
-  }
-  .clearContainer button:hover {
-    background-color: rgba(91, 158, 114, 1);
-  }
-  .clearContainer button:active {
-    background-color: rgba(68, 119, 85, 1);
   }
   .theme-dark .entryInner, .theme-dark .requestArea {
     color: rgba(245, 245, 245, 1);
