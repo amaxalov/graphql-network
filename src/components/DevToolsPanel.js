@@ -62,6 +62,9 @@ export default class DevToolsPanel extends React.Component {
             <span className="name">Operation Name</span>
             <span className="params">Params</span>
             <span className="fields">Selection</span>
+            {data.length > 0 &&
+              <button className="clear" onClick={() => this.clearEntries()}>Clear</button>
+            }
           </div>
         </div>
         {data.map((entry, i) => {
@@ -74,11 +77,7 @@ export default class DevToolsPanel extends React.Component {
             />
           );
         })}
-        {data.length > 0 &&
-          <div className="clearContainer">
-            <button onClick={() => this.clearEntries()}>Clear</button>
-          </div>
-        }
+
         </div>
         <div className={`displayAreaWrapper ${entryOpen && 'longDisplayAreaWrapper'}`}>
           {entryOpen && (
