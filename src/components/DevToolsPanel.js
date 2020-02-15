@@ -61,10 +61,12 @@ export default class DevToolsPanel extends React.Component {
           <div className="operation header">
             <span className="name">Operation Name</span>
             <span className="params">Params</span>
-            <span className="fields">Selection</span>
-            {data.length > 0 &&
-              <button className="clear" onClick={() => this.clearEntries()}>Clear</button>
-            }
+            <div className="fields">
+              <span>Selection</span>
+              {data.length > 0 &&
+                <button className="clear" onClick={() => this.clearEntries()}>Clear</button>
+              }
+            </div>
           </div>
         </div>
         {data.map((entry, i) => {
